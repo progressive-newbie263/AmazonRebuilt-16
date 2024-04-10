@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enter Key Test</title>
+  <!--<link rel="stylesheet" href="styles.css">-->
+</head>
+<body>
+  <div class="container">
+    <input type="text" class="input-field" placeholder="Type here and press Enter...">
+    <p class="output"></p>
+  </div>
+
+  <script>
+    const inputField = document.querySelector('.input-field');
+    const output = document.querySelector('.output');
+
+    inputField.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        const enteredText = inputField.value;
+        output.textContent = `You entered: ${enteredText}`;
+        inputField.value = ''; // Clear the input field
+    }
+    });
+  </script>
+</body>
+</html>
+
+
